@@ -1,0 +1,51 @@
+<?php include(APP_DIR . 'layouts/scripts/header.phtml') ?>
+<body>
+
+<div class="header-bar">
+	<div class="container">
+
+		<p class="logo pull-left">SOCCERREPUBLIK</p>
+		
+		<ul class="main-nav pull-right">
+			<li><a href="index.html">2 Column</a></li>
+			<li><a href="1column.html">1 Column</a></li>
+			<li class="active"><a href="nosidebar.html">No Sidebar</a></li>
+			<li><a href="content.html">Content Page</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		
+	</div>
+<!-- End Header -->
+</div>
+<div class="main-area">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				
+				<h1>Soccer Highlights <small>Best soccer videos on the web</small></h1>
+				
+				
+				
+				
+				
+				<?php echo $this->layout()->content; ?>
+				
+				<div class="pagination pull-right">
+				  <ul>
+				    <li><a href="#">Prev</a></li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">Next</a></li>
+				  </ul>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+<!-- End Main Area -->
+</div>
+
+<?php include(APP_DIR . 'layouts/scripts/footer.phtml') ?>

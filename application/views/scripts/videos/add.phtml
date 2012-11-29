@@ -1,0 +1,23 @@
+<label>Video URL: </label><input type="text" id="url" name="url"><br><button id="scrapper"  name="scrapper" class='btn'>Get Info</button>
+
+<?php echo $this->form ?>
+
+
+<script>
+$('#scrapper').click( function (){
+	var video_url = encodeURIComponent($("#url").val());
+	var scrapping = "/videos/scrapper/?videourl=" + video_url;
+	
+	var json = $.ajax({
+    'url': scrapping,
+    'success': function(json) {
+        $("#title").val(json.title);
+        $("#thumb").val(json.thumb);
+        $("textarea#description").val(json.description);
+        $("textarea#embed_code").val(json.embed_code);
+        }
+    });
+
+;
+});
+</script>

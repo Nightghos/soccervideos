@@ -1,0 +1,27 @@
+<?php if ($this->videos) ?>
+<div class="span12">
+<?php $count = 0; ?>
+<?php foreach ($this->videos as $video): ?>
+	
+	<?php if ($count == 2) { ?>
+<div class="row">
+	<?php } ?>
+
+<div class="span4">
+	<div class="post">
+		<img class="thumbs" src="<?php echo $video["thumb"] ?>">
+		<div class="summary">
+			<h2><a href="#"><?php echo $video["title"] ?></a></h2>
+		</div>
+		<p class="meta"><?php echo date("m/d/Y h:i:s",$video['posted']) ?><a href=""> Posts</a></p>
+	</div>
+</div>
+
+<?php $count++; ?>
+<?php if ($count == 3) { ?>
+		</div>
+<?php $count=0 ; } ?>
+
+<?php endforeach; ?>
+</div>
+
